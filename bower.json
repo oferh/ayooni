@@ -1,0 +1,19 @@
+{
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-bootstrap": "~0.13.0"
+  },
+  "name": "ayooni",
+  "version": "0.0.0",
+  "author": "ofer",
+  "private": true,
+  "devDependencies": {
+    "angular-mocks": "~1.4.0"
+  }
+}
