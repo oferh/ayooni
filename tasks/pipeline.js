@@ -25,7 +25,7 @@ var cssFilesToInject = [
 var jsFilesToInject = [
   
   'vendor/angular/*.js',
-  'vendor/angular-bootstrap/*.js',
+  'vendor/angular-*/*.js',
   
   // Load sails.io before everything else
   'js/dependencies/sails.io.js',

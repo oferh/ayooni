@@ -68,6 +68,8 @@ var lowerSails = function(sails, grunt, done, err) {
 module.exports = function(grunt) {
     'use strict';
 
+    process.env.NODE_ENV = 'test';
+  
     grunt.registerMultiTask('test-sails', 'create a sails instance for tests', function(){
       var done = this.async(),
           sails = new SailsApp(),

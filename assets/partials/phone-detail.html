@@ -1,0 +1,104 @@
+<div class="row">
+  <div class="col-md-3">
+    <img ng-src="{{mainImageUrl}}" class="phone">
+  </div>
+  <div class="col-md-9">
+    <h1>{{phone.name}}</h1>
+    <p>{{phone.description}}</p>
+    <div class="row" id="thumbs-container">
+      <div class="col-md-1" ng-repeat="img in phone.images">
+          <img class="phone-thumbs img-thumbnail" ng-src="{{img}}" ng-click="setImage(img)">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-2">
+    <h4>Availability and Networks</h4>
+    <h5>Availability</h5>
+    <p>{{phone.availability}}</p>
+  </div>
+  <div class="col-md-1">
+    <h4>Battery</h4>
+    <h5>Type</h5>
+    <p>{{phone.batteryType}}</p>
+    <h5>Talk Time</h5>
+    <p>{{phone.talkTime}}</p>
+    <h5>Standby time (max)</h5>
+    <p>{{phone.standbyTime}}</p>
+  </div>
+  <div class="col-md-1">
+    <h4>Storage and Memory</h4>
+    <h5>RAM</h5>
+    <p>{{phone.ram}}</p>
+    <h5>Internal Storage</h5>
+    <p>{{phone.flash}}</p>
+  </div>
+  <div class="col-md-1">
+    <h4>Connectivity</h4>
+    <h5>Network Support</h5>
+    <p>{{phone.cell}}</p>
+    <h5>WiFi</h5>
+    <p>{{phone.wifi}}</p>
+    <h5>Bluetooth</h5>
+    <p>{{phone.bluetooth}}</p>
+    <h5>Infrared</h5>
+    <p>{{phone.infrared | checkmark }}</p>
+    <h5>GPS</h5>
+    <p>{{phone.gps | checkmark }}</p>
+  </div>
+  <div class="col-md-1">
+    <h4>Android</h4>
+    <h5>OS Version</h5>
+    <p>{{phone.os}}</p>
+    <h5>UI</h5>
+    <p>{{phone.ui}}</p>
+  </div>
+  <div class="col-md-1">
+    <h4>Size and Weight</h4>
+    <h5>Dimensions</h5>
+    <p>{{phone.dimensions}}</p>
+    <h5>Weight</h5>
+    <p>{{phone.weight }}</p>
+  </div>
+  <div class="col-md-1">
+    <h4>Display</h4>
+    <h5>Screen size</h5>
+    <p>{{phone.screenSize}}</p>
+    <h5>Screen resolution</h5>
+    <p>{{phone.screenResolution}}</p>
+    <h5>Touch screen</h5>
+    <p>{{phone.touchScreen | checkmark }}</p>
+  </div>
+  <div class="col-md-1">
+    <h4>Hardware</h4>
+    <h5>CPU</h5>
+    <p>{{phone.cpu}}</p>
+    <h5>USB</h5>
+    <p>{{phone.usb}}</p>
+    <h5>Audio / headphone jack</h5>
+    <p>{{phone.audioJack}}</p>
+    <h5>FM Radio</h5>
+    <p>{{phone.fmRadio | checkmark }}</p>
+    <h5>Accelerometer</h5>
+    <p>{{phone.accelerometer | checkmark }}</p>
+    <h5>Physical keyboard</h5>
+    <p>{{phone.physicalKeyboard | checkmark }}</p>
+  </div>
+  <div class="col-md-1">
+    <h4>Camera</h4>
+    <h5>Primary</h5>
+    <p>{{phone.cameraPrimary}}</p>
+    <h5>Features</h5>
+    <p>{{phone.cameraFeatures }}</p>
+  </div>
+</div>
+
+    
+<div class="row">
+  <div class="col-md-2">
+    <h4>Additional Features</h4>
+    <p>{{phone.additionalFeatures}}</p>
+  </div>
+</div>

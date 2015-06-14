@@ -1,0 +1,21 @@
+<div class="container-fluid" ng-controller="PhoneListCtrl">
+  <div class="row">
+    <div class="col-md-2">
+      Search: <input ng-model="query">
+      Sort by:
+      <select ng-model="orderProp">
+        <option value="name">Alphabetical</option>
+        <option value="age">Newest</option>
+      </select>
+    </div>
+    <div class="col-md-10">
+      <div class="phones">
+        <div class="row thumbnail phone-listing" ng-repeat="phone in phones | filter:query | orderBy:orderProp">
+          <a href="#/phones/{{phone.id}}" class="col-md-1 thumb"><img ng-src="{{phone.imageUrl}}"></a>
+          <a href="#/phones/{{phone.id}}" class="col-md-1">{{phone.name}}</a>
+          <div class="col-md-6">{{phone.snippet}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -12,7 +12,7 @@ module.exports = function(config) {
     // list of files / patterns to load in the browser
     files: [
       'assets/vendor/angular/angular.js',
-      'assets/vendor/angular-mocks/angular-mocks.js',
+      'assets/vendor/angular-*/*.js',
       'assets/js/*.js',
       'assets/js/**/*.js',
       'test/mock/**/*.js',
