@@ -9,7 +9,8 @@
   "dependencies": {
     "angular-bootstrap": "~0.13.0",
     "angular-route": "~1.4.0",
-    "angular-resource": "~1.4.0"
+    "angular-resource": "~1.4.0",
+    "angular-animate": "~1.4.1"
   },
   "name": "ayooni",
   "version": "0.0.0",
