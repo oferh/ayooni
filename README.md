@@ -1,6 +1,6 @@
 # Ayooni
 
-A sails + angular + bootsrap template wih testing for each
+A sails + angular + bootsrap template with testing for each
 
 The template includes these components:
 
