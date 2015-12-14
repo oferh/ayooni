@@ -6,11 +6,11 @@ describe('PhoneCat App', function() {
         expect(url).toBe('/phones');
       });
   });
-  
+
   describe('Phone list view', function() {
 
     beforeEach(function() {
-      browser.get('/#/phones');
+      browser.get('/phones');
     });
 
 
@@ -28,7 +28,7 @@ describe('PhoneCat App', function() {
       query.sendKeys('motorola');
       expect(phoneList.count()).toBe(8);
     });
-    
+
     it('should be possible to control the phones sort order via the drop down select box', function() {
       var phoneNameColumn = element.all(by.repeater('phone in phones').column('phone.name'));
       var query = element(by.model('query'));
@@ -62,19 +62,19 @@ describe('PhoneCat App', function() {
       browser.getLocationAbsUrl().then(function(url) {
         expect(url).toBe('/phones/nexus-s');
       });
-    }); 
+    });
   });
-  
+
   describe('Phone detail view', function() {
 
     beforeEach(function() {
-      browser.get('/#/phones/nexus-s');
+      browser.get('/phones/nexus-s');
     });
 
     it('should display nexus-s page', function() {
       expect(element(by.binding('phone.name')).getText()).toBe('Nexus S');
     });
-    
+
     it('should display the first phone image as the main phone image', function() {
       expect(element(by.css('img.phone')).getAttribute('src')).toMatch(/images\/phones\/nexus-s.0.jpg/);
     });
@@ -88,5 +88,5 @@ describe('PhoneCat App', function() {
       expect(element(by.css('img.phone')).getAttribute('src')).toMatch(/images\/phones\/nexus-s.0.jpg/);
     });
   });
-  
+
 });

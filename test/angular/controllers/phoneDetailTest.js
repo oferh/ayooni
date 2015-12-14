@@ -18,13 +18,13 @@ describe('PhoneDetailsCtrl', function(){
             }
     });
   });
-  
+
   beforeEach(module('phonecatApp'));
   beforeEach(module('phonecatServices'));
 
   beforeEach(inject(function(_$httpBackend_, $rootScope, $routeParams, $controller) {
       $httpBackend = _$httpBackend_;
-      $httpBackend.expectGET('/phones/xyz').respond({
+      $httpBackend.expectGET('/api/phones/xyz').respond({
         name: 'phone xyz',
         images: 'image/url1.png image/url2.png'
       });

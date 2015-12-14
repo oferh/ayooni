@@ -18,13 +18,13 @@ describe('PhoneListCtrl', function(){
             }
     });
   });
-  
+
   beforeEach(module('phonecatApp'));
   beforeEach(module('phonecatServices'));
 
   beforeEach(inject(function(_$httpBackend_, $rootScope, $controller) {
     $httpBackend = _$httpBackend_;
-    $httpBackend.expectGET('/phones').
+    $httpBackend.expectGET('/api/phones').
       respond([{"name": "Motorola XOOM\u2122 with Wi-Fi"},
                {"name": "MOTOROLA XOOM\u2122"}
               ]);
